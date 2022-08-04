@@ -1,3 +1,10 @@
+'''
+	Title: Xat Multi-Threaded ID Generator
+	Author: Armin [Perc (40302)]
+	Date: /
+	Description: Generates Xat IDs unbelievably fast.
+'''
+
 from threading import Thread
 from requests import get
 from time import sleep
