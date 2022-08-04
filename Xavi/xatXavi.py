@@ -1,3 +1,10 @@
+'''
+	Title: Xat Xavi Modifier
+	Author: Armin [Perc (40302)]
+	Date: /
+	Description: Modify your xats xavi to your liking, bypassing xats limitations using xavi app.
+'''
+
 from xml.etree import ElementTree
 from json import dumps, loads
 import requests
