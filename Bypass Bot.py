@@ -1,3 +1,9 @@
+'''
+	Title: Xat Bypass Bot
+	Author: Armin [Perc (40302)]
+	Date: /
+'''
+
 from random import randint, choice
 from xml.etree import ElementTree
 from json import dumps, loads
