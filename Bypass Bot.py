@@ -2,6 +2,7 @@
 	Title: Xat Bypass Bot
 	Author: Armin [Perc (40302)]
 	Date: /
+	Description: Minimal bypass bot for xat, no commands, just structure.
 '''
 
 from random import randint, choice
