@@ -1,3 +1,10 @@
+'''
+	Title: Xat Login
+	Author: Armin [Perc (40302)]
+	Date: /
+	Description: Fetches <y login packet information needed for bot logins. User:Crc32_Pw
+'''
+
 from random import random, randint, choice
 from xml.etree import ElementTree
 from json import dumps, loads
