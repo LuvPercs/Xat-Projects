@@ -16,11 +16,11 @@ from socket import *
 
 class bypassBot:
 	botConfig = {
-		0: 1545040188,			# ID
+		0: 1545040188,				# ID
 		1: 'ede4d04f9862ec147400',	# K1
-		2: 'Name',			# Name
-		3: 5,				# Avatar
-		4: 'Dev'			# Room
+		2: 'Name',					# Name
+		3: 5,						# Avatar
+		4: 'Dev'					# Room
 	}
 
 	liveIP 	= get('https://xat.com/web_gear/chat/ip3.php').json()
@@ -50,6 +50,15 @@ class bypassBot:
 			except:
 				pass
 
+	def xmlArray(self, xml):
+		try:
+			_return = {}
+			array = ElementTree.fromstring(xml if xml[-1:] != chr(0) else xml[:-1])
+			_return['tag'] = array.tag
+			for i in array.attrib:
+				_return[i] = array.attrib[i]
+		finally: return _return
+
 	def build(self, tag, _dict):
 		return bytes('<' + tag + ' ' + (' '.join([_list[0] + '="' + _list[1] + '"' for _list in _dict])) + ' />\0', encoding = 'utf-8')
 
@@ -76,15 +85,6 @@ class bypassBot:
 		]
 
 		return self.build('j2', j2)
-
-	def xmlArray(self, xml):
-		try:
-			_return = {}
-			array = ElementTree.fromstring(xml if xml[-1:] != chr(0) else xml[:-1])
-			_return['tag'] = array.tag
-			for i in array.attrib:
-				_return[i] = array.attrib[i]
-		finally: return _return
 
 	def chat(self, chat):
 		Chat = get('http://xat.com/web_gear/chat/roomid.php?d={}'.format(str(chat))).json()
