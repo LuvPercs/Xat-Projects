@@ -16,11 +16,11 @@ from socket import *
 
 class bypassBot:
 	botConfig = {
-		0: 1545040188,				# ID
+		0: 1545040188,			# ID
 		1: 'ede4d04f9862ec147400',	# K1
-		2: 'Name',					# Name
-		3: 5,						# Avatar
-		4: 'Dev'					# Room
+		2: 'Name',			# Name
+		3: 5,				# Avatar
+		4: 'Dev'			# Room
 	}
 
 	liveIP 	= get('https://xat.com/web_gear/chat/ip3.php').json()
